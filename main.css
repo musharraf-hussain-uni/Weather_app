@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    background-image: url('VDCIj6.webp');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+  }
+  
+  header input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(7, 6, 6, 0.7);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  header input:hover{
+  
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  header input::before {
+  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+  }
+  
+  main {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+  
+  /* CSS code */
+  .container {
+    box-sizing: border-box;
+    border: none;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(7, 6, 6, 0.7);
+    border-radius: 25px;
+    
+  }
+  
+  .location {
+    margin-bottom: 25px; /* add some space between the two elements */
+  }
+  
+  /* You can remove the border and box-sizing properties from .location and .current */
+  .current{
+    box-sizing: border-box; /* Set the box-sizing property to border-box */
+    border: none;
+    padding: 20px;
+    background-color: rgba(88, 82, 82, 0.278);
+    border-radius: 25px;
+  }
+  
+  .location .city {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    
+  }
+  
+  .location .date {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .current .temp {
+    color: #ffffff;
+    font-size: 102px;
+    font-weight: 500;
+    margin: 30px 0px;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  }
+  
+  .current .temp span {
+    font-weight: 400;
+  }
+  
+  .current .weather {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 15px;
+  
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  }
+  
+  .current .hi-low {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+  
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  main {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+  
+  /* styles for devices with a screen width of less than 600px */
+  @media only screen and (max-width: 600px) {
+    header input {
+      max-width: 100%;
+    }
+    
+    main {
+      padding: 10px;
+    }
+    
+    .current .temp {
+      font-size: 72px;
+    }
+    
+    .current .weather {
+      font-size: 24px;
+    }
+  }
+  
+  /* styles for devices with a screen width of at least 600px */
+  @media only screen and (min-width: 600px) {
+    header input {
+      max-width: 280px;
+    }
+    
+    main {
+      padding: 25px 50px;
+    }
+    
+    .current .temp {
+      font-size: 102px;
+    }
+    
+    .current .weather {
+      font-size: 32px;
+    }
+  }
+  
+  
